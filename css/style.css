@@ -1,0 +1,49 @@
+/* <uniquifier>: Use a unique and descriptive class name <weight>: Use a value from 100 to 900*/
+
+.noto-sans-<uniquifier> {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 3px 3px pink;
+}
+
+* {
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    background-image: url(../img/nuages-style-fantastique.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+
+  }
+
+.bandeau ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.band {
+    display: inline-block;
+}
+
+.band a::after {
+    display: inline-block;
+    color:  #000;
+    content: ' ';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}

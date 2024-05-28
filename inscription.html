@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire inscription</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <h1>ENI - MEMORY - Accueil</h1>
+         <!--bandeau cliquable-->
+         <nav class="bandeau">
+            <ol>
+                <li class="band"><a href="index.html">Accueil</a></li>
+                <li class="band"><a href="inscription.html">S'inscrire</a></li>
+                <li class="band"><a href="connexion.html">Se connecter</a></li>
+                <li class="band"><a href="profil.html">Profil</a></li>
+                <li class="band"><a href="jeu.html">Jouer</a></li>
+            </ol>
+          </nav>
+     </header>
+     <main>
+        <form action="inscription.html" method="post">
+            <h2>Inscrivez-vous :</h2>
+            <label for="text">Nom d'utilisateur</label>
+            <input type="text" minlength="3" placeholder="3 caractères minimum" required>
+            <label for="email">Entrez votre email</label>
+            <input type="email" pattern="email" placeholder="Votre email" required>
+            <label for="password">Mot de passe</label>
+            <input type="password" minlength="6" placeholder="Votre mot de passe" required>
+            <p>Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
+            <label for="passwordConf">Confirmez le mot de passe</label>
+            <input type="passwordConf" minlength="6" placeholder="Confirmez le mot de passe" required>
+            <button id="creaCompte">Création du compte</button>
+            <button id="annuler">Annuler</button>
+        </form>
+     </main>
+    
+     <script src="script.js"></script>
+ </body>
+ <footer>
+     <p>Copyright © 2024 Memory by Eloizzz</p>
+ </footer>
+ </html>
