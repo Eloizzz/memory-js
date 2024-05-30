@@ -1,158 +1,97 @@
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+
+
+.nabla {
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
 }
 
-.noto-sans-uniquifier {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-}
-  
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 3px pink;
-    margin-top: 50px;
-}
-  
-* {
-    font-family: "Noto Sans", sans-serif;
-}
-  
-body {
-   background-image: url(../img/nuages-style-fantastique.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-  
-nav {
-    background-color: rgb(206, 48, 250);
-    padding: 0.5%;
-    margin: auto;
+td {
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    width: 15vh;
+    cursor: pointer;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 50%;
-    margin-bottom: auto;
-}
-  
-nav a {
-    color: rgba(255,255,255,80%);
-    text-decoration: none;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: auto;
-    text-shadow: pink 1px 0 10px;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
 }
 
-nav a:hover {
-    color: rgba(255,255,255,100%);
-    text-shadow: pink 1px 0 10px;
-    font-size: larger;
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    max-width: 500px;
+    margin-left: 150px;
 }
-    
-.bandeau ol {
-    list-style-type: none;
-    padding-left: 0;
-    text-decoration-line: none;
+
+td:hover{
+    padding: auto;
 }
-  
-.band {
-    display: inline-flex;
-}
-  
-.band a::after {
-    display: inline-flex;
-    color:  #000;
-    content: ' ';
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0 3px;
-}
-  
-main {
-    background-color: hsla(301, 82%, 89%, 0.5);
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+
+img {
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    width: 50%;
-}
-
-main li {
-    text-align: left;
-    margin: 0.2rem;
-    padding-left: 6rem;
-}
-
-.grid {
-  max-width: 960px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.card {
-  position: relative;
-  -webkit-transition: all .4s linear;
-  -o-transition: all .4s linear;
-  transition: all .4s linear;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  margin: 5px;
-}
-
-.card,
-.back,
-.front {
-  height: 150px;
-  width: 150px;
-}
-
-.back,
-.front {
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.front {
-  background: url('../img/back.png') no-repeat center center / contain;
-}
-
-.selected {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.match .front {
-  background: #6589F9 !important;
+    height: 100%;
+    width: 100%;
 }
 
 .counter {
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 1rem;
+    background-color: rgba(0,0,0,50%);
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 20px;
 }
 
-footer {
-    padding-left: 6rem;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #6c757d;
+.counter p {
+    font-family: "Nabla", system-ui;
+    font-size: 30px;
+    text-shadow: black 0.5px 0 5px;
+    margin: 0;
+    color: white;
+}
+
+#counter-value {
+    font-weight: bold;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#container.won .card {
+    animation: flip-won 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes flip-won {
+    0% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    color:rgb(206, 48, 250);
+    text-shadow: 3px 3px 3px pink;
+    margin-top: 2rem;
+    animation: shine 2.5s ease-in-out infinite;
 }

@@ -1,28 +1,45 @@
-/* <uniquifier>: Use a unique and descriptive class name <weight>: Use a value from 100 to 900*/
 
-.noto-sans-uniquifier {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
+  .livvic-regular {
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
-    color: white;
+    color: pink;
     text-shadow: 3px 3px 3px pink;
     margin-top: 50px;
+    animation: shine 2.5s ease-in-out infinite;
 }
+
+@keyframes shine {
+    0% {
+      text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 5px #fff, 0 0 10px pink, 0 0 15px pink, 0 0 20px pink, 0 0 25px pink, 0 0 30px pink;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px pink, 0 0 30px pink, 0 0 40px pink, 0 0 50px pink, 0 0 60px pink, 0 0 50px pink, 0 0 40px pink, 0 0 30px pink, 0 0 20px pink, 0 0 15px pink, 0 0 10px pink, 0 0 5px pink
+    }
+  }
 
 * {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Livvic", sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+      background-size: contain;
+    }
+    nav, main {
+      width: 100%;
+    }
+  }
+
+
 body {
-    background-image: url(../img/nuages-style-fantastique.jpg);
+    background-image: url(../img/nuages-style-fantastique.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -34,7 +51,7 @@ nav {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 50%;
+    width: 60rem;
     margin-bottom: auto;
 }
 
@@ -51,6 +68,7 @@ nav a:hover {
     color: rgba(255,255,255,100%);
     text-shadow: pink 1px 0 10px;
     font-size: larger;
+    font-weight: 700;
 }
 
 .bandeau ol {
@@ -81,13 +99,15 @@ main {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 50%;
+    width: 60rem;
 }
 
 main li {
     text-align: left;
     margin: 0.2rem;
     padding-left: 6rem;
+    padding-bottom: 0.5rem;
+    list-style-type: none;
 }
 
 footer {
@@ -95,4 +115,13 @@ footer {
     margin-bottom: 10px;
     font-size: 12px;
     color: #6c757d;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    color:rgb(206, 48, 250);
+    text-shadow: 3px 3px 3px pink;
+    margin-top: 50px;
+    animation: shine 2.5s ease-in-out infinite;
 }
