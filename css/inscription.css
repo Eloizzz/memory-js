@@ -114,4 +114,10 @@ button {
     background-color: green;
 }
 
+.erreur {
+  color: red;
+}
+
+.succes {
+  color: green;
 }
