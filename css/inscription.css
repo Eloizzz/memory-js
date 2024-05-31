@@ -102,14 +102,16 @@ button {
     border-radius: 50%;
 }
 
-#passwordStrength data-strength="Faible":after {
+#passwordStrength[data-strength="Faible"]:after {
     background-color: red;
 }
 
-#passwordStrength data-strength="Moyen":after {
+#passwordStrength[data-strength="Moyen"]:after {
     background-color: orange;
 }
 
 #passwordStrength[data-strength="Fort"]:after {
     background-color: green;
+}
+
 }
